@@ -122,7 +122,7 @@
     ├── pyproject.toml
     └── requirements.txt
     ```
-8. ✅ Add templates and integrate bootstrap5.
+8. ✅ Add templates and integrate Bootstrap5.
     ```python
     crm
     ├── __init__.py
@@ -139,3 +139,12 @@
     ```
 
     <img src="assets/images/stage1.png" />
+
+9.  ✅ Create **SuperUser** to login and logout in the backend to access admin panel.
+    ```python
+    # django-crm/
+    python manage.py createsuperuser
+    ```
+
+10. ✅ Integrate **Log In** and **Log Out** Feature using Django Authentication System. Also **alert** messages using Bootstrap5.
+    <img src="assets/images/stage2.png" />

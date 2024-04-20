@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-urlpatterns:list = [
+urlpatterns: list = [
     path(route="admin/", view=admin.site.urls),
-    path(route="", view=include(arg="crm.urls"))
+    path(route="", view=include(arg="crm.urls")),
 ]
