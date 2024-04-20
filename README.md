@@ -137,3 +137,5 @@
     ├── urls.py
     └── views.py
     ```
+
+    <img src="assets/images/stage1.png" />
