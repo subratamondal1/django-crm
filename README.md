@@ -91,7 +91,7 @@
     ```
 
 6. ✅ Install Mysql Community Server and Workbench.
-7. Connect DJANGO with MYSQL
+7. ✅ Connect DJANGO with MYSQL
     ```python
     .
     ├── .github
@@ -121,4 +121,19 @@
     ├── poetry.lock
     ├── pyproject.toml
     └── requirements.txt
+    ```
+8. ✅ Add templates and integrate bootstrap5.
+    ```python
+    crm
+    ├── __init__.py
+    ├── admin.py
+    ├── apps.py
+    ├── models.py
+    ├── templates # TEMPLATES
+    │   ├── base.html
+    │   ├── home.html
+    │   └── navbar.html
+    ├── tests.py
+    ├── urls.py
+    └── views.py
     ```

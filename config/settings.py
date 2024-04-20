@@ -82,7 +82,7 @@ DATABASES: dict[str, dict] = {
     # },
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "django-crm-db",
+        "NAME": "django_crm",
         "USER": "root",
         "PASSWORD": "12345678",
         "HOST": "localhost",

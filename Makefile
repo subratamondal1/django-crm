@@ -35,3 +35,7 @@ install-local:
 all: install format lint test deploy
 
 check: format lint
+
+run-dj:
+	# python3 manage.py runserver
+	python3 manage.py runserver
