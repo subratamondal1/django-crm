@@ -8,7 +8,7 @@ format:
 
 lint:
 	# flake8 or pylint
-	pylint --disable=R,C *.py config/*.py crm/*.py
+	pylint --disable=R,C,E1101 *.py config/*.py crm/*.py
 
 test:
 	# test

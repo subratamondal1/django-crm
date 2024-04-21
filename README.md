@@ -2,6 +2,8 @@
 
 <h2 align="center">STEPS</h2>
 
+<h3 align="left">Make the Website Up & Running</h3>
+
 1. ✅ Create Github Repository **django-crm**. Clone it in the local machine.
 2. ✅ Initialize the repo with **Poetry**.
     ```python
@@ -152,3 +154,31 @@
 
 11. ✅ Integrate **User Registration** Feature with Django Forms and Bootstrap5.
     <img src="assets/images/stage4.png" />
+---
+<h3 align="left">Implement Core CRM Features</h3>
+
+1. ✅ Create the Database Model for Records with Django Models.
+2. ✅ Make Migrations (instructions for database creation) and Migrate those generated Migrations
+    ```bash
+    1. python manage.py makemigrations
+
+    # Output
+    Migrations for 'crm':
+        crm/migrations/0001_initial.py
+            - Create model Record
+
+    2. python manage.py migrate
+
+    # Output
+    Operations to perform:
+        Apply all migrations: admin, auth, contenttypes, crm, sessions
+    Running migrations:
+        Applying crm.0001_initial... OK
+    ```
+
+3. ✅ Add records from the Backend (Admin Panel) to the Database.
+    <img src="assets/images/stage5.png" />
+
+4. ✅ Display records on the website's homepage from the Database.
+    <img src="assets/images/stage6.png" />
+

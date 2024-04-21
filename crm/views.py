@@ -7,7 +7,9 @@ from django.shortcuts import (
 )
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+
 from .forms import SignUpForm
+from .models import Record
 
 
 # Create your views here.
@@ -17,8 +19,10 @@ from .forms import SignUpForm
 def home(
     request,
 ) -> HttpResponse | HttpResponsePermanentRedirect | HttpResponseRedirect:
-    # Check if the user is logging in i.e sending POST Request
-    if request.method == "POST":
+    # Fetch and store all the records
+    records = Record.objects.all()
+
+    if request.method == "POST":  # logging in the user
         username = request.POST["username"]
         password = request.POST["password"]
 
@@ -34,9 +38,10 @@ def home(
                 message="❌ Invalid Credentials. Please provide correct details.",
             )
             return redirect(to="home")
-    else:
-        # If not logging in means already an user, send them to home
-        return render(request=request, template_name="home.html", context={})
+    else:  # this part executes only if the user is already logged in
+        return render(
+            request=request, template_name="home.html", context={"records": records}
+        )
 
 
 # def login_user(request):
