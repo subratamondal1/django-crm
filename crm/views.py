@@ -7,6 +7,7 @@ from django.shortcuts import (
 )
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from .forms import SignUpForm
 
 
 # Create your views here.
@@ -46,3 +47,31 @@ def logout_user(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect
     logout(request=request)
     messages.success(request=request, message="✅ You have been logged out.")
     return redirect(to="home")
+
+
+def register_user(
+    request,
+) -> HttpResponse | HttpResponseRedirect | HttpResponsePermanentRedirect:
+    # If the user is filling up the form and sending post request to register
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # Authenticate and Login
+            username = form.cleaned_data["username"]
+            password = form.cleaned_data["password1"]
+            user = authenticate(request=request, username=username, password=password)
+            login(request=request, user=user)
+            messages.success(
+                request=request,
+                message="✅ You have been successfully registered. Welcome!",
+            )
+            return redirect(to="home")
+    else:
+        form = SignUpForm()
+        return render(
+            request=request, template_name="register.html", context={"form": form}
+        )
+    return render(
+        request=request, template_name="register.html", context={"form": form}
+    )

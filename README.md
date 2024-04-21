@@ -148,3 +148,7 @@
 
 10. ✅ Integrate **Log In** and **Log Out** Feature using Django Authentication System. Also **alert** messages using Bootstrap5.
     <img src="assets/images/stage2.png" />
+    <img src="assets/images/stage3.png" />
+
+11. ✅ Integrate **User Registration** Feature with Django Forms and Bootstrap5.
+    <img src="assets/images/stage4.png" />
