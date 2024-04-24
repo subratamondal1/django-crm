@@ -182,3 +182,6 @@
 4. ✅ Display records on the website's homepage from the Database.
     <img src="assets/images/stage6.png" />
 
+5. ✅ Add, Delete and View Cards of individual Records from the website.
+    <img src="assets/images/stage7.png" />
+

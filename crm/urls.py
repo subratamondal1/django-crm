@@ -7,4 +7,5 @@ urlpatterns: list = [
     # path(route="login/", view=views.login_user, name="login"),
     path(route="logout/", view=views.logout_user, name="logout"),
     path(route="register/", view=views.register_user, name="register"),
+    path(route="record/<int:pk>/", view=views.customer_record, name="record"),
 ]

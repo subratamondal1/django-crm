@@ -80,3 +80,20 @@ def register_user(
     return render(
         request=request, template_name="register.html", context={"form": form}
     )
+
+
+def customer_record(request, pk):
+    if request.user.is_authenticated:
+        # Look up the Record
+        record = Record.objects.get(id=pk)
+        return render(
+            request=request,
+            template_name="record.html",
+            context={"customer_record": record},
+        )
+    else:
+        messages.success(
+            request=request,
+            message="⚠️ You must be logged in to view this page!",
+        )
+        return redirect(to="home")
