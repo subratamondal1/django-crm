@@ -188,4 +188,7 @@
 6. ✅ Implement Delete Record Feature.
     <img src="assets/images/stage8.png" />
 
+7. ✅ Implement Add Record Feature.
+    <img src="assets/images/stage9.png" />
+
 
