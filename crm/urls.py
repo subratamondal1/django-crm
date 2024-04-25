@@ -8,4 +8,7 @@ urlpatterns: list = [
     path(route="logout/", view=views.logout_user, name="logout"),
     path(route="register/", view=views.register_user, name="register"),
     path(route="record/<int:pk>/", view=views.customer_record, name="record"),
+    path(
+        route="delete_record/<int:pk>/", view=views.delete_record, name="delete_record"
+    ),
 ]

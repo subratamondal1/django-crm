@@ -182,6 +182,10 @@
 4. ✅ Display records on the website's homepage from the Database.
     <img src="assets/images/stage6.png" />
 
-5. ✅ Add, Delete and View Cards of individual Records from the website.
+5. ✅ Display Card for individual Record in the website.
     <img src="assets/images/stage7.png" />
+
+6. ✅ Implement Delete Record Feature.
+    <img src="assets/images/stage8.png" />
+
 

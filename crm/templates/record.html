@@ -7,7 +7,7 @@
     <button type="button" class="btn btn-dark" href="#">
         <strong>{{customer_record.first_name}} {{customer_record.last_name}}</strong>
     </button>
-
+    <button type="button" class="btn btn-success position-relative"><a class="btn btn-dark  btn-sm" href="{% url "delete_record" customer_record.id %}"><strong>␡</strong></a></button>
     <button type="button" class="btn btn-success position-relative"><a class="btn btn-dark  btn-sm" href="{% url "home" %}"><strong>←</strong></a></button>
   </div>
   <ul class="list-group list-group-flush">

@@ -82,7 +82,9 @@ def register_user(
     )
 
 
-def customer_record(request, pk):
+def customer_record(
+    request, pk
+) -> HttpResponse | HttpResponseRedirect | HttpResponsePermanentRedirect:
     if request.user.is_authenticated:
         # Look up the Record
         record = Record.objects.get(id=pk)
@@ -95,5 +97,22 @@ def customer_record(request, pk):
         messages.success(
             request=request,
             message="⚠️ You must be logged in to view this page!",
+        )
+        return redirect(to="home")
+
+
+def delete_record(request, pk):
+    if request.user.is_authenticated:
+        record = Record.objects.get(id=pk)
+        record.delete()
+        messages.success(
+            request=request,
+            message="⚠️ Record deleted successfully!",
+        )
+        return redirect(to="home")
+    else:
+        messages.success(
+            request=request,
+            message="⚠️ You must be logged in to perform this operation!",
         )
         return redirect(to="home")
