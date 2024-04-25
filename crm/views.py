@@ -117,20 +117,24 @@ def delete_record(request, pk):
         )
         return redirect(to="home")
 
+
 def add_record(request):
     form = AddRecordForm(data=request.POST or None)
     if request.user.is_authenticated:
         if request.method == "POST":
             if form.is_valid():
                 add_record = form.save()
-                messages.success(request=request, message="✅ Record Added Successfully.")
+                messages.success(
+                    request=request, message="✅ Record Added Successfully."
+                )
                 return redirect(to="home")
         # If not POSTing
-        return render(request=request, template_name="add_record.html", context={"form":form})
+        return render(
+            request=request, template_name="add_record.html", context={"form": form}
+        )
     else:
         messages.success(
             request=request,
             message="⚠️ You must be logged in...",
         )
         return redirect(to="home")
-    

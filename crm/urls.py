@@ -11,7 +11,5 @@ urlpatterns: list = [
     path(
         route="delete_record/<int:pk>/", view=views.delete_record, name="delete_record"
     ),
-    path(
-        route="add_record/", view=views.add_record, name="add_record"
-    ),
+    path(route="add_record/", view=views.add_record, name="add_record"),
 ]
