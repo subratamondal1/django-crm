@@ -191,4 +191,6 @@
 7. ✅ Implement Add Record Feature.
     <img src="assets/images/stage9.png" />
 
-
+8. ✅ Implement Update Record Feature.
+    <img src="assets/images/stage10.png" />
+    <img src="assets/images/stage11.png" />

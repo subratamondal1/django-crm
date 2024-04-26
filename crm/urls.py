@@ -12,4 +12,5 @@ urlpatterns: list = [
         route="delete_record/<int:pk>/", view=views.delete_record, name="delete_record"
     ),
     path(route="add_record/", view=views.add_record, name="add_record"),
+    path(route="update_record/<int:pk>", view=views.update_record, name="update_record"),
 ]
