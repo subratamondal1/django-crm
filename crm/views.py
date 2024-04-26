@@ -123,7 +123,8 @@ def add_record(request):
     if request.user.is_authenticated:
         if request.method == "POST":
             if form.is_valid():
-                add_record = form.save()
+                record = form.save()
+                print(record)
                 messages.success(
                     request=request, message="✅ Record Added Successfully."
                 )
@@ -138,8 +139,9 @@ def add_record(request):
             message="⚠️ You must be logged in...",
         )
         return redirect(to="home")
-    
-def update_record(request,pk):
+
+
+def update_record(request, pk):
     if request.user.is_authenticated:
         record = Record.objects.get(id=pk)
         form = AddRecordForm(data=request.POST or None, instance=record)

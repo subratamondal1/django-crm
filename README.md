@@ -1,4 +1,23 @@
 <h1 align="center">DJANGO CRM</h1>
+<img src="assets/images/stage00.png" />
+
+<h2 align="center">TECH STACK</h2>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,django,mysql,githubactions,html,css,docker,aws,git,github&perline=5" />
+</p>
+
+<p align="center">
+<strong>PYTHON,</strong>
+<strong>DJANGO,</strong>
+<strong>MYSQL,</strong>
+<strong>GITHUB ACTIONS (CI/CD),</strong>
+<strong>HTML,</strong>
+<strong>CSS,</strong>
+<strong>DOCKER,</strong>
+<strong>AWS,</strong>
+<strong>GIT,</strong>
+<strong>GITHUB.</strong>
+</p>
 
 <h2 align="center">STEPS</h2>
 
