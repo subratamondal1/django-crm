@@ -1,4 +1,11 @@
 <h1 align="center">DJANGO CRM</h1>
+
+<p align="center">
+    <a href="https://github.com/subratamondal1/django-crm/actions/workflows/devops.yml">
+        <img src="https://github.com/subratamondal1/django-crm/actions/workflows/devops.yml/badge.svg"/>
+    </a>
+</p>
+
 <img src="assets/images/stage00.png" />
 
 <h2 align="center">TECH STACK</h2>
