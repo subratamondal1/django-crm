@@ -85,7 +85,7 @@ DATABASES: dict[str, dict] = {
         "NAME": "django_crm",
         "USER": "root",
         "PASSWORD": "12345678",
-        "HOST": "django-crm.cpyu0gkwoaia.us-east-1.rds.amazonaws.com",  # "host.docker.internal", # "localhost"
+        "HOST": "host.docker.internal", # "django-crm.cpyu0gkwoaia.us-east-1.rds.amazonaws.com", # "localhost"
         "PORT": "3306",
     }
 }
