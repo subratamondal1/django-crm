@@ -241,6 +241,16 @@ On successfull execution the django app will start up and running at the [**loca
 
 <h2 align="center">AWS ECR (Elastic Container Registry) i.e Docker Container Registry</h2>
 
-1. ✅ Deployment: Successfully pushed the Docker image to the AWS ECR repository.
+1. ✅ **Deployment:** Successfully pushed the Docker image to the AWS ECR repository.
 
 <img src="assets/images/awsecr1.png" />
+
+<h2 align="center">AWS RDS</h2>
+
+1. ✅ **AWS RDS DATABASE:** To connect AWS APP RUNNER with the managed MYSQL Database by AWS RDS.
+
+<img src="assets/images/aws-rds1.png" />
+
+<h2 align="center">AWS APP RUNNER</h2>
+
+**AWS APP RUNNER:** Build and run production web applications at scale.
