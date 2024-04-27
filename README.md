@@ -238,3 +238,9 @@ docker-compose up --build
 On successfull execution the django app will start up and running at the [**localhost:8000**](localhost:8000)
 
 <img src="assets/images/docker1.png" />
+
+<h2 align="center">AWS ECR (Elastic Container Registry) i.e Docker Container Registry</h2>
+
+1. ✅ Deployment: Successfully pushed the Docker image to the AWS ECR repository.
+
+<img src="assets/images/awsecr1.png" />
