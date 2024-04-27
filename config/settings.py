@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -85,7 +86,7 @@ DATABASES: dict[str, dict] = {
         "NAME": "django_crm",
         "USER": "root",
         "PASSWORD": "12345678",
-        "HOST": "host.docker.internal", # "django-crm.cpyu0gkwoaia.us-east-1.rds.amazonaws.com", # "localhost"
+        "HOST": os.getenv("MYSQL_HOST", "host.docker.internal"),
         "PORT": "3306",
     }
 }

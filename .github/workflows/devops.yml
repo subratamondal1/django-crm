@@ -1,25 +1,51 @@
 name: DJANGO CRM
+
 on:
   push:
     paths-ignore:
       - "**/*.lock"
       - "**/*.toml"
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: 12345678
+          MYSQL_DATABASE: django_crm
+        ports:
+          - 3306:3306
+
     steps:
       - uses: actions/checkout@v2
+      
       - name: Set up Python 3.11
         uses: actions/setup-python@v1
         with:
           python-version: 3.11
+      
       - name: Install dependencies
         run: make install
+      
       - name: Format code
         run: make format
+      
       - name: Lint with pylint
         run: make lint
+      
       - name: Test with pytest
         run: make test
+      
       - name: Build Docker Container
         run: make build
+      
+      - name: Run Docker Container
+        run: make run
+        env:
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_USER: root
+          MYSQL_PASSWORD: 12345678
+          MYSQL_DATABASE: django_crm

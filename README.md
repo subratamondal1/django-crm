@@ -256,3 +256,13 @@ On successfull execution the django app will start up and running at the [**loca
 **AWS APP RUNNER:** Build and run production web applications at scale.
 
 <img src="assets/images/aws-apprunner1.png" />
+
+<h1 align="center">REPRODUCE</h1>
+
+To run this app on your local machine follow these steps:
+
+1. Git clone this repository.
+2. Then from the `root` path run the command from terminal: `make build` or `docker-compose up --build`.
+
+> **Note:** make sure **docker** is installed on your device.
+
