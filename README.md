@@ -220,3 +220,21 @@
 8. ✅ Implement Update Record Feature.
     <img src="assets/images/stage10.png" />
     <img src="assets/images/stage11.png" />
+
+<h1 align="center">DEPLOYMENT</h1>
+
+<img src="assets/images/deploy1.png" />
+
+<h2 align="center">DOCKER</h2>
+
+1. ✅ Setup `Dockerfile` and `docker-compose.yml` file.
+
+2. ✅ Build and Start services defined in the `docker-compose.yml` via:
+
+```bash
+docker-compose up --build
+```
+
+On successfull execution the django app will start up and running at the [**localhost:8000**](localhost:8000)
+
+<img src="assets/images/docker1.png" />

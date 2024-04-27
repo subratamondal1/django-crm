@@ -15,8 +15,8 @@ test:
 	# python -m pytest --cov=mylib tests/*.py
 
 build:
-	# build build
-	# docker build -t django-crm .
+	# docker-compose up --build
+	docker-compose up --build
 run:
 	# docker run
 	# docker run -p 127.0.0.1:8080:8080 b19ef7dfd01b
