@@ -254,3 +254,5 @@ On successfull execution the django app will start up and running at the [**loca
 <h2 align="center">AWS APP RUNNER</h2>
 
 **AWS APP RUNNER:** Build and run production web applications at scale.
+
+<img src="assets/images/aws-apprunner1.png" />
