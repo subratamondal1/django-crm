@@ -1,4 +1,4 @@
-django == 5.0.4
+django == 4.2.13
 mysql == 0.0.3
 black == 24.4.0
 pytest == 8.1.1
