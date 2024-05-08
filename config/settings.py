@@ -24,9 +24,9 @@ BASE_DIR: Path = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-9w%zovwv_hdsz1093gzn9g@bf54jhl2717d5^zt6*(_1of49xr"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS: list = []
+ALLOWED_HOSTS: list = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -70,7 +70,8 @@ TEMPLATES: list[dict] = [
     },
 ]
 
-WSGI_APPLICATION = "config.wsgi.application"
+# WSGI_APPLICATION = "config.wsgi.application"
+WSGI_APPLICATION = "config.wsgi.app" # for VERCEL DEPLOYMENT
 
 
 # Database
@@ -81,14 +82,27 @@ DATABASES: dict[str, dict] = {
     #     "ENGINE": "django.db.backends.sqlite3",
     #     "NAME": BASE_DIR / "db.sqlite3",
     # },
+
+    # For Local Machine
+    # "default": {
+    #     "ENGINE": "django.db.backends.mysql",
+    #     "NAME": "django_crm",
+    #     "USER": "root",
+    #     "PASSWORD": "12345678",
+    #     "HOST": os.getenv("MYSQL_HOST", "host.docker.internal"), # for DOCKER
+    #     "PORT": "3306",
+    # },
+    
+    # For deployment in VERCEL
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "django_crm",
         "USER": "root",
-        "PASSWORD": "12345678",
-        "HOST": os.getenv("MYSQL_HOST", "host.docker.internal"),
-        "PORT": "3306",
-    }
+        "PASSWORD": "lbGPNKMRGHEuopFTUeBhgNFZSiaojFjQ",
+        "HOST": "monorail.proxy.rlwy.net",
+        "PORT": "40697",
+    },
+
 }
 
 
@@ -132,3 +146,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
